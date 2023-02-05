@@ -1,0 +1,43 @@
+body{
+	text-align: center;
+}
+
+input{
+	width: 500px;
+	height: 60px;
+	background-color: aqua;
+	border: 2px solid #aaa;
+
+}
+button{ 	
+	font-style:inherit;
+	font-size: 40px;
+	width: 500px;
+	height: 60px;
+	
+	margin-bottom: 50px;
+	background-color: lawngreen;
+	border: none;
+	cursor: pointer;
+}
+span{
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.timer{
+	display: flex;
+	justify-content: center;
+}
+.field{
+	display: flex;
+	flex-direction: column;
+	width: 90px;
+	margin-right: 10px;
+	border: 1px solid cyan;
+}
+.value{
+font-weight: 600;
+font-size: 40px;
+}
+
