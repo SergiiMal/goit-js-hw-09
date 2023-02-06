@@ -7,18 +7,18 @@ const days = document.querySelector('span[data-days]');
 const hours = document.querySelector('span[data-hours]');
 const minutes = document.querySelector('span[data-minutes]');
 const seconds = document.querySelector('span[data-seconds]');
- 
+
 let selectedDate = null;
 let intervalId = null;
 
+button.disabled = true;
 const now = new Date();
 
-// button.disabled = false;
 
-const countDiff = obj => {
-	
+
+
+const countDiff = obj => {	 
 	selectedDate = new Date(obj[0]); 	
-	
 	if (selectedDate < now) {
 		return Notiflix.Notify.failure('Please choose a date in the future');
 	}
@@ -31,18 +31,22 @@ const hendleButtonBehaviour = e => {
 	intervalId = setInterval(count, 1000);
 }
 
-button.addEventListener('click', hendleButtonBehaviour)
+
 
 function count() {
 	const diff = selectedDate - new Date();	
-	if (diff === 0) clearInterval(intervalId);
-	const converted = convertMs(diff);
-	days.textContent = addLeadingZero(converted.days);
-	hours.textContent = addLeadingZero(converted.minutes);
+	if (diff < 0) {
+		 clearInterval(intervalId);
+	} else {
+		const converted = convertMs(diff);
+	days.textContent = converted.days;
+	hours.textContent = addLeadingZero(converted.hours);
 	minutes.textContent = addLeadingZero(converted.minutes);
 	seconds.textContent = addLeadingZero(converted.seconds);
 	button.disabled = true;
+	}
 }
+button.addEventListener('click', hendleButtonBehaviour)
 	
 const options = {
   enableTime: true,

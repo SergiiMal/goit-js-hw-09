@@ -20,6 +20,17 @@ button{
 	border: none;
 	cursor: pointer;
 }
+
+button[disabled] {
+	background-color: #e4e4e4;
+	color: #adadad;
+}
+
+/* button:hover,
+button:focus {
+	background-color: #adadad;
+	border: 2px solid #adadad;
+} */
 span{
 	font-size: 20px;
 	font-weight: 500;
