@@ -16,13 +16,13 @@ function updateBodyColor() {
 
 function startChangeColor(){	
 	// 
-	btnStart.disabeld = true;
-	btnStop.disabeld = false;
+	btnStart.disabled = true;
+	btnStop.disabled = false;
 	intervalId = setInterval(updateBodyColor, 1000);
 }
 
 function stopChangeColor(){
-	btnStop.disabeld = true;
-	btnStart.disabeld = false;
+	btnStop.disabled = true;
+	btnStart.disabled = false;
 	clearInterval(intervalId) 
 }
