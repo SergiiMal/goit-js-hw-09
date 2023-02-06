@@ -26,8 +26,3 @@ function stopChangeColor(){
 	btnStart.disabeld = false;
 	clearInterval(intervalId) 
 }
-
-
-
-// const updateBodyColor = document.body.style.backgroundColor;
-
